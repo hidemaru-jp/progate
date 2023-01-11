@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  post 'users/:id/update' => 'users#update'
+  get 'users/:id/edit' => 'users#edit'
+  get 'signup' => 'users#new'
+  get 'users/:id' => 'users#show'
+  post 'users/create'
   get '/' => 'home#top'
   get 'about' => 'home#about'
   get 'posts/index'
